@@ -1,33 +1,20 @@
 import "./App.css"
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom"
-import Home from "./components/Home"
-import About from "./components/About"
-import Navbar from "./components/Navbar"
-import User from "./components/User"
-import Filter from "./components/Filter"
-import Contact from "./components/Contact"
-import Company from "./components/Company"
-import Channel from "./components/Channel"
-import Other from "./components/Other"
-import Login from "./components/Login"
-import Protected from "./components/Protected"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Home from "./Home"
+import About from "./About"
+import Contact from "./Contact"
+import Error from "./Error"
+
 function App() {
 	return (
 		<>
 			<div className="App">
 				<BrowserRouter>
-					<Navbar />
 					<Routes>
-						<Route path="/" element={<Protected Component={Home} />} />
-						<Route path="/login" element={<Login />} />
-						<Route path="/about" element={<Protected Component={About} />} />
-						<Route path="/user/:name" element={<User />} />
-						<Route path="/filter" element={<Protected Component={Filter} />} />
-						<Route path="/*" element={<Navigate to="/" />} />
-						<Route path="/contact/" element={<Protected Component={Contact} />}>
-							<Route path="company" element={<Company />} />
-							<Route path="channel" element={<Channel />} />
-							<Route path="other" element={<Other />} />
+						<Route path="/" element={<Home />}>
+							<Route path="/about" element={<About />} />
+							<Route path="/contact" element={<Contact />} />
+							<Route path="*" element={<Error />} />
 						</Route>
 					</Routes>
 				</BrowserRouter>
