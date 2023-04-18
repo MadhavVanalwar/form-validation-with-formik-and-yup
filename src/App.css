@@ -2,3 +2,25 @@
     text-align: center;
 }
 
+.navbar ul {
+    text-align: right;
+}
+
+.navbar li {
+    display: inline-block;
+    padding: 10px 5px;
+}
+
+.navbar li .active {
+    color: red;
+    background-color: skyblue
+}
+
+.nav-bar-link {
+    color: black;
+    text-decoration: none;
+}
+
+.nav-bar-link:hover {
+    color: green;
+}
