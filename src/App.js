@@ -1,11 +1,11 @@
 import "./App.css"
-import Validation from "./Validation"
+import FormikForm2 from "./FormikForm2"
 
 function App() {
 	return (
 		<>
 			<div className="App">
-				<Validation />
+				<FormikForm2 />
 			</div>
 		</>
 	)
